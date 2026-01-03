@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعداد: علي فاضل - اختبار البرمجية</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .header-name {
+            text-align: center;
+            font-size: 1.5em;
+            color: #e67e22;
+            margin-bottom: 30px;
+        }
+        .question-block {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-right: 5px solid #3498db;
+            background: #fafafa;
+        }
+        .question-text {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: block;
+            direction: ltr;
+            text-align: left;
+        }
+        .hint-btn {
+            background-color: #95a5a6;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+        .hint-text {
+            display: none;
+            color: #27ae60;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+            cursor: pointer;
+            direction: ltr;
+            text-align: left;
+        }
+        .result-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .result-btn:hover {
+            background-color: #27ae60;
+        }
+        #scoreDisplay {
+            text-align: center;
+            font-size: 1.4em;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #d35400;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>اختبار مادة البرمجية (ص 1 - ص 6)</h1>
+    <div class="header-name">إعداد: علي فاضل</div>
+
+    <form id="quizForm">
+        
+        <div class="question-block">
+            <span class="question-text">1. An Interface in .NET Framework is a graphical user interface (GUI) that the user sees.</span>
+            <button type="button" class="hint-btn" onclick="toggleHint(this)">تلميح بالعربي</button>
+            <div class="hint-text">هل الواجهة البرمجية (Interface) هي نفسها الواجهة الرسومية التي نراها؟</div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="false"> True</label>
+                <label><input type="radio" name="q1" value="true"> False</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <span class="question-text">2. Which concept represents a "Contract" that defines signatures without implementation?</span>
+            <button type="button" class="hint-btn" onclick="toggleHint(this)">تلميح بالعربي</button>
+            <div class="hint-text">ما هو المفهوم الذي يعتبر "عقد" يحدد شكل الوظائف بدون تنفيذها؟</div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> GUI</label>
+                <label><input type="radio" name="q2" value="b"> Interface</label>
+                <label><input type="radio" name="q2" value="c"> UX</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <span class="question-text">3. Buttons, Text Boxes, and Menus are essential elements of the GUI.</span>
+            <button type="button" class="hint-btn" onclick="toggleHint(this)">تلميح بالعربي</button>
+            <div class="hint-text">هل الأزرار ومربعات النصوص هي عناصر من الواجهة الرسومية؟</div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="true"> True</label>
+                <label><input type="radio" name="q3" value="false"> False</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <span class="question-text">4. Feedback means providing an immediate reaction to the user's action.</span>
+            <button type="button" class="hint-btn" onclick="toggleHint(this)">تلميح بالعربي</button>
+            <div class="hint-text">هل التغذية الراجعة تعني إعطاء رد فعل فوري للمستخدم؟</div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="true"> True</label>
+                <label><input type="radio" name="q4" value="false"> False</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <span class="question-text">5. UX (User Experience) focuses only on the colors and shapes of buttons.</span>
+            <button type="button" class="hint-btn" onclick="toggleHint(this)">تلميح بالعربي</button>
+            <div class="hint-text">هل تجربة المستخدم (UX) تهتم فقط بالألوان وأشكال الأزرار؟</div>
+            <div class="options">
+                <label><input type="radio" name="q5" value="false"> True</label>
+                <label><input type="radio" name="q5" value="true"> False</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <span class="question-text">6. The logic, calculations, and database connection are handled by the:</span>
+            <button type="button" class="hint-btn" onclick="toggleHint(this)">تلميح بالعربي</button>
+            <div class="hint-text">من المسؤول عن العمليات الحسابية والربط مع قاعدة البيانات؟</div>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a"> Front-end</label>
+                <label><input type="radio" name="q6" value="b"> Back-end</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <span class="question-text">7. Consistency in GUI design means using different button shapes for each page.</span>
+            <button type="button" class="hint-btn" onclick="toggleHint(this)">تلميح بالعربي</button>
+            <div class="hint-text">هل التناسق يعني استخدام أشكال مختلفة للأزرار في كل صفحة؟</div>
+            <div class="options">
+                <label><input type="radio" name="q7" value="false"> True</label>
+                <label><input type="radio" name="q7" value="true"> False</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <span class="question-text">8. Interfaces are widely used in designing large systems to ensure organization.</span>
+            <button type="button" class="hint-btn" onclick="toggleHint(this)">تلميح بالعربي</button>
+            <div class="hint-text">هل تُستخدم الواجهات بكثرة في الأنظمة الكبيرة لضمان التنظيم؟</div>
+            <div class="options">
+                <label><input type="radio" name="q8" value="true"> True</label>
+                <label><input type="radio" name="q8" value="false"> False</label>
+            </div>
+        </div>
+
+        <button type="button" class="result-btn" onclick="calculateScore()">عرض النتيجة</button>
+    </form>
+
+    <div id="scoreDisplay"></div>
+</div>
+
+<script>
+    function toggleHint(btn) {
+        var hint = btn.nextElementSibling;
+        if (hint.style.display === "none" || hint.style.display === "") {
+            hint.style.display = "block";
+            btn.innerText = "إخفاء التلميح";
+        } else {
+            hint.style.display = "none";
+            btn.innerText = "تلميح بالعربي";
+        }
+    }
+
+    function calculateScore() {
+        var score = 0;
+        var totalQuestions = 8;
+        var form = document.getElementById('quizForm');
+
+        // Answers Key
+        var answers = {
+            q1: "true",  // Interface is NOT a GUI (False is the correct check)
+            q2: "b",     // Interface
+            q3: "true",  // True
+            q4: "true",  // True
+            q5: "true",  // UX is more than colors (False is the correct check)
+            q6: "b",     // Back-end
+            q7: "true",  // Consistency means SAME shapes (False is the correct check)
+            q8: "true"   // True
+        };
+
+        // Check Radio buttons
+        if(form.q1.value === "true") score++;
+        if(form.q2.value === "b") score++;
+        if(form.q3.value === "true") score++;
+        if(form.q4.value === "true") score++;
+        if(form.q5.value === "true") score++;
+        if(form.q6.value === "b") score++;
+        if(form.q7.value === "true") score++;
+        if(form.q8.value === "true") score++;
+
+        document.getElementById('scoreDisplay').innerText = "درجتك النهائية هي: " + score + " من " + totalQuestions;
+    }
+</script>
+
+</body>
+</html>
